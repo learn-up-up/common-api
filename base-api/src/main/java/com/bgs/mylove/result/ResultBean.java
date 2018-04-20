@@ -18,9 +18,11 @@ import java.io.Serializable;
  */
 public class ResultBean<T> implements Serializable {
 
+
 	public static final int SUCCESS = 0;
 	public static final int FAIL = 1;
 	public static final int NO_PEMISSION= 2;
+	private static final long serialVersionUID = -3569025123926482883L;
 
 	private String msg = "success";
 	private int	code = SUCCESS;
@@ -41,5 +43,28 @@ public class ResultBean<T> implements Serializable {
 		this.msg = e.toString();
 		this.code = FAIL;
 	}
+	//不加getter会让数据返回转换异常
+	public static int getSUCCESS() {
+		return SUCCESS;
+	}
 
+	public static int getFAIL() {
+		return FAIL;
+	}
+
+	public static int getNoPemission() {
+		return NO_PEMISSION;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public T getData() {
+		return data;
+	}
 }
