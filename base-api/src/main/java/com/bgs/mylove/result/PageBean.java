@@ -26,6 +26,11 @@ public class PageBean<T> {
 
 	public PageBean(int page, int limit, long pageTotal, long amount, List<T> pageData) {
 		super();
+		this.page = page;
+		this.limit = limit;
+		this.pageTotal = pageTotal;
+		this.amount = amount;
+		this.pageData = pageData;
 	}
 
 	public int getPage() {
