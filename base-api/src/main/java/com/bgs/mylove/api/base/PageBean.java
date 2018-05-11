@@ -1,4 +1,4 @@
-package com.bgs.mylove.result;
+package com.bgs.mylove.api.base;
 
 import java.util.List;
 
